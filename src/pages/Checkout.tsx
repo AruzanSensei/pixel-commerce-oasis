@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, CreditCard, Truck, Lock } from 'lucide-react';
@@ -349,13 +348,13 @@ const Checkout = () => {
                     </TabsContent>
                   </Tabs>
 
-                  {/* Billing Address */}
+                  {/* Billing Address - THIS IS THE PART THAT NEEDS TO BE FIXED */}
                   <div>
                     <div className="flex items-center space-x-2 mb-4">
                       <Checkbox
                         id="useShippingForBilling"
                         checked={useShippingForBilling}
-                        onCheckedChange={setUseShippingForBilling}
+                        onCheckedChange={(checked) => setUseShippingForBilling(checked === true)}
                       />
                       <Label htmlFor="useShippingForBilling">
                         Use shipping address for billing
